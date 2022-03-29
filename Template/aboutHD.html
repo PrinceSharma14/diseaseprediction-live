@@ -1,0 +1,202 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>How To Fill Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+   
+    <div id="box-2">
+        <ul id='nav'>
+            <div class="header">
+                <li><a href="{% url 'index' %}" class="active">HOME</a></li>
+                <div class="header-right">
+                    <li><a href="{% url 'Type' %}">TYPES OF HEART
+                            DISEASE</a></li>
+                    <li><a href="{% url 'Prevention' %}">PREVENTION</a></li>
+                    <li><a href="{% url 'Symptoms' %}">SYMPTOMS</a></li>
+                    <li><a href="{% url 'Treatment' %}" >TREATMENT</a></li>
+                    <li><a href="{% url 'Causes' %}">CAUSES</a></li>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div style="font-family: Courgette; font-size:20px;">
+        <br><br>
+ 1) Age: Age of the person being tested.(In years)<br>
+
+2) Sex: Gender of the person being tested.(1= Male, 0= Female)<br>
+3) cp: cp: chest pain type<br>
+-- Value 1: typical angina<br>
+-- Value 2: atypical angina<br>
+-- Value 3: non-anginal pain<br>
+-- Value 4: asymptomatic<br>
+4) trestbps: resting blood pressure (in mm Hg on admission to the hospital)<br>
+5) chol: serum cholestoral in mg/dl<br>
+6) fbs: (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false)<br>
+7) restecg: resting electrocardiographic results<br>
+-- Value 0: normal<br>
+-- Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)<br>
+-- Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteria<br>
+8) thalach: maximum heart rate achieved<br>
+9) exang: exercise induced angina (1 = yes; 0 = no)<br>
+10) oldpeak: ST depression induced by exercise relative to rest<br>
+11) slope: the slope of the peak exercise ST segment<br>
+-- Value 1: upsloping<br>
+-- Value 2: flat<br>
+-- Value 3: downsloping<br>
+12) ca: number of major vessels (0-3) colored by flourosopy<br>
+13) thal: 1 = normal; 2 = fixed defect; 3 = reversable defect<br>
+14) target: num: diagnosis of heart disease (angiographic disease status)<br>
+-- Value 0: < 50% diameter narrowing<br>
+-- Value 1: > 50% diameter narrowing<br>
+(in any major vessel: attributes 59 through 68 are vessels)<br>
+<br>
+<br>
+Refrence: https://archive.ics.uci.edu/ml/datasets/heart%2BDisease<br>
+<br>
+<br>
+<br>
+
+
+3) Value 1: Typical angina (TA) is defined as substernal chest pain precipitated by physical exertion or emotional stress and relieved with rest or nitroglycerin.<br> 
+Women and elderly patients are usually have atypical symptoms both at rest and during stress, often in the setting of nonobstructive coronary artery disease (CAD)<br>
+[https://www.ncbi.nlm.nih.gov]<br>
+<br>
+Value 2: When one experiences chest pain that doesn't meet the criteria for angina, it's known as atypical chest pain. Angina chest pain is a pressure or squeezing<br>
+like sensation that is usually caused when your heart muscle doesn't get an adequate supply of oxygenated blood.<br>
+[https://www.ppschicago.com]<br>
+<br>
+Value 3: Non Anginal Pain: The pain is nonanginal if its duration is over 30 minutes or less than 5 seconds, it increases with inspiration,<br> 
+can be brought on with one movement of the trunk or arm, can be brought on by local fingers pressure, or bending forward, or it can be relieved immediately on lying down.<br>
+
+Value 4: Asymptomatic heart pains medically known as silent myocardial infarction (SMI).The symptoms of SMI being very mild in comparison to an actual heart attack;<br> 
+it is described as a silent killer. Unlike the symptoms in a normal heart attack which includes extreme chest pain, stabbing pain in the arms, neck & jaw,<br> 
+sudden shortness of breath, sweating and dizziness, the symptoms of SMI are very brief and hence confused with regular discomfort and most often ignored.<br>
+<br>
+Risk Factors<br>
+The risk factors are same as that of classic heart attack. It includes:<br>
+
+* Age<br>
+* Family history<br>
+* Smoking or chewing tobacco<br>
+* High blood pressure<br>
+* High cholesterol<br>
+* Diabetes<br>
+* Weight issues<br>
+* Lack of physical activity<br>
+[https://www.maxhealthcare.in/blogs/rise-cases-asymptomatic-heart-attacks-amongst-middle-aged-people]<br>
+<br>
+<br>
+4) trestbps: (Resting Blood Pressure)When your heart is at rest, between beats, your blood pressure falls. This is called diastolic pressure.<br>
+Your blood pressure reading uses these two numbers. Usually the systolic number comes before or above the diastolic number.<br> 
+For example, 120/80 means a systolic of 120 and a diastolic of 80.<br>
+[https://medlineplus.gov/highbloodpressure.html]<br>
+<br>
+5) chol:(Serum Cholestrol) A healthy adult should have a blood test that includes a serum cholesterol check every four to six years.<br> 
+As you get older, your doctor may advise you to have your cholesterol, and other markers of health like your blood pressure, checked every year.<br> 
+This is especially true if you have risk factors for cardiovascular disease. These factors include:<br>
+<br>
+obesity<br>
+smoking<br>
+family history of heart disease<br>
+<br>
+healthy serum cholesterol ---> less than 200 mg/dL<br>
+<br>
+<br>
+6) fbs:(Fasting blood shugar level) Fasting blood glucose: A test to determine how much glucose (sugar) is in a blood sample after an overnight fast. <br>
+The fasting blood glucose test is commonly used to detect diabetes mellitus.A blood sample is taken in a lab, physician's office, or hospital. <br>
+The test is done in the morning, before the person has eaten.<br>
+[https://www.medicinenet.com]<br>
+<br>
+<br>
+7) restecg: (resting electrocardiographic results)An electrocardiogram (ECG) is a medical test that detects cardiac (heart) abnormalities by measuring the electrical <br>
+Activity generated by the heart as it contracts.The machine that records the patientâ€™s ECG is called an electrocardiograph.<br>
+The electrocardiograph records the electrical activity of the heart muscle and displays this data as a trace on a screen or on paper.<br>
+This data is then interpreted by a medical practitioner.ECGs from healthy hearts have a characteristic shape.<br> 
+Any irregularity in the heart rhythm or damage to the heart muscle can change the electrical activity of the heart so that the shape of the ECG is changed.<br>
+A doctor may recommend an ECG for people who may be at risk of heart disease because there is a family history of heart disease, or because they smoke, are overweight,<br> 
+or have diabetes, high cholesterol or high blood pressure.<br>
+<br>
+They may also recommend an ECG if a person is experiencing symptoms such as:<br>
+<br>
+chest pain<br>
+shortness of breath<br>
+dizziness<br>
+fainting, or<br>
+fast or irregular heartbeats (palpitations).<br>
+ECGs are often performed to monitor the health of people who have been diagnosed with heart problems, to help assess artificial cardiac pacemakers or to monitor the effects of certain medications on the heart.<br>
+[https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/ecg-test]<br>
+<br>
+<br>
+
+
+8) thalach: (maximum heart rate achieved) For moderate-intensity physical activity, your target heart rate should be between 64% and 76%1,2 of your maximum heart rate.<br>
+You can estimate your maximum heart rate based on your age. To estimate your maximum age-related heart rate, subtract your age from 220. For example,<br> 
+for a 50-year-old person, the estimated maximum age-related heart rate would be calculated as 220 â€“ 50 years = 170 beats per minute (bpm). The 64% and 76% levels would be:<br>
+<br>
+64% level: 170 x 0.64 = 109 bpm, and<br>
+76% level: 170 x 0.76 = 129 bpm<br>
+[https://www.cdc.gov/physicalactivity/basics/measuring/heartrate.html]<br>
+<br>
+
+9) exang: (exercise induced angina) Angina is caused by reduced blood flow to your heart muscle. Your blood carries oxygen, which your heart muscle needs to survive.<br> 
+When your heart muscle isn't getting enough oxygen, it causes a condition called ischemia.The most common cause of reduced blood flow to your heart muscle is coronary artery disease (CAD). Your heart (coronary) arteries can become narrowed by fatty deposits called plaques. This is called atherosclerosis.<br>
+<br>
+During times of low oxygen demand â€” when you're resting, for example â€” your heart muscle may still be able to function on the reduced amount of blood flow without triggering angina symptoms. But when you increase the demand for oxygen, such as when you exercise, angina can result.<br>
+<br>
+Stable angina. Stable angina is usually triggered by physical activity. When you climb stairs, exercise or walk, your heart demands more blood, but narrowed arteries slow down blood flow. Besides physical activity, other factors such as emotional stress, cold temperatures, heavy meals and smoking also can narrow arteries and trigger angina.<br>
+Unstable angina. If fatty deposits (plaques) in a blood vessel rupture or a blood clot forms, it can quickly block or reduce flow through a narrowed artery. This can suddenly and severely decrease blood flow to your heart muscle. <br>Unstable angina can also be caused by blood clots that block or partially block your heart's blood vessels.<br>
+<br>
+Unstable angina worsens and isn't relieved by rest or your usual medications. If the blood flow doesn't improve, your heart is starved of oxygen and a heart attack occurs. Unstable angina is dangerous and requires emergency treatment.<br>
+Prinzmetal's angina. This type of angina is caused by a sudden spasm in a coronary artery, which temporarily narrows the artery. This narrowing reduces blood flow to your heart, causing severe chest pain. Prinzmetal's angina most often occurs at rest, typically overnight. Attacks tend to occur in clusters.<br> 
+Emotional stress, smoking, medications that tighten blood vessels (such as some migraine drugs) and use of the illegal drug cocaine may trigger Prinzmetal's angina.<br>
+[https://www.mayoclinic.org/diseases-conditions/angina/symptoms-causes/syc-20369373]<br>
+<br>
+<br>
+10) oldpeak: (ST depression induced by exercise relative to rest)ST depression occurs when the J point is displaced below baseline. Just like ST elevation, not all ST depression represents myocardial ischemia or an emergent condition. 
+There are multiple conditions associated with ST depression. Some of these include hypokalemia, cardiac ischemia, and medications such as digitalis.<br>
+[https://www.ncbi.nlm.nih.gov]
+<br>
+<br>
+
+11) ca: A heart scan, also known as a coronary calcium scan, is a specialized X-ray test that provides pictures of your heart that can help your doctor detect and measure calcium-containing plaque in the arteries.<br>
+Plaque inside the arteries of your heart can grow and restrict blood flow to the muscles of the heart. Measuring calcified plaque with a heart scan may allow your doctor to identify possible coronary artery disease before you have signs and symptoms.A heart scan uses a specialized X-ray technology called multidetector row or multislice computerized tomography (CT), 
+which creates multiple images of plaque deposits in the blood vessels. The imaging test provides an early look at levels of plaque.<br>
+Plaque is made up of fats, cholesterol, calcium and other substances in the blood. It develops gradually over time, long before there are any signs or symptoms of disease. These deposits can restrict the flow of oxygen-rich blood to the muscles of the heart. Plaque also may burst, triggering a blood clot that can cause a heart attack.<br>
+<br>
+[https://www.mayoclinic.org/tests-procedures/heart-scan/about/pac-20384686#:~:text=A%20heart%20scan%20(coronary%20calcium,increase%20your%20heart%20attack%20risk.]<br>
+
+<br>
+12) thal: Thalassemia (thal-uh-SEE-me-uh) is an inherited blood disorder that causes your body to have less hemoglobin than normal. <br>
+Hemoglobin enables red blood cells to carry oxygen. Thalassemia can cause anemia, leaving you fatigued.<br>
+If you have mild thalassemia, you might not need treatment. But more severe forms might require regular blood transfusions. <br>
+You can take steps to cope with fatigue, such as choosing a healthy diet and exercising regularly.
+<br>
+Symptoms<br>
+There are several types of thalassemia. The signs and symptoms you have depend on the type and severity of your condition.<br>
+<br>
+Thalassemia signs and symptoms can include:<br>
+<br>
+Fatigue<br>
+Weakness<br>
+Pale or yellowish skin<br>
+Facial bone deformities<br>
+Slow growth<br>
+Abdominal swelling<br>
+Dark urine<br>
+    </div>
+
+    
+</body>
+
+</html>

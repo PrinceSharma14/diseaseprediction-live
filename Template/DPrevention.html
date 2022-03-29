@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevention</title>
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'CSS/Prevention.css' %}">
+</head>
+
+<body>
+    <div id="box-2">
+        <ul id='nav'>
+            <div class="header">
+                <li><a href="{% url 'Dindex' %}">HOME</a></li>
+                <div class="header-right">
+                    <li><a href="{% url 'DTypes' %}">TYPES OF HEART
+                            DISEASE</a></li>
+                    <li><a href="{% url 'DPrevention' %}" class="active">PREVENTION</a></li>
+                    <li><a href="{% url 'Symptoms' %}">SYMPTOMS</a></li>
+                    <li><a href="{% url 'Treatment' %}">TREATMENT</a></li>
+                    <li><a href="{% url 'Causes' %}">CAUSES</a></li>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <img src="{% static 'Images/img14.jpg' %}">
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <h1 >Prevention Of Diabetes<h1>
+    </nav>
+
+    <h2 class="navbar navbar-dark bg-danger">Some lifestyle measures can help reduce the risk of  disease. These include:</h2>
+
+    <p>Type 1 diabetes is not preventable because its caused by a problem with the immune system. Some causes of type 2 diabetes, such as your genes or age, are not under your control either.
+<br>
+        Yet many other diabetes risk factors are controllable. Most diabetes prevention strategies involve making simple adjustments to your diet and fitness routine.
+        <br>
+        If you have been diagnosed with prediabetes, here are a few things you can do to delay or prevent type 2 diabetes:
+    </p>
+    <p><b>--> Get at least 150 minutes per week of aerobic exercise, such as walking or cycling.</b> </p>
+    <p><b>--> Cut saturated and trans fats, along with refined carbohydrates, out of your diet.</b> </p>
+    <p><b>--> Eat more fruits, vegetables, and whole grains</b> </p>
+    <p><b>--> Eat smaller portions</b> </p>
+    <p><b>--> Try to lose 7 percentTrusted Source of your body weight if you are overweight or obese.</b> </p>
+    <p>These are not the only ways to prevent diabetes. Discover more strategies that may help you avoid this chronic disease.</p>
+
+
+
+</body>
+
+</html>

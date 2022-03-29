@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction System </title>
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div id="box-2">
+        <ul id='nav'>
+            <div class="header">
+                <li><a href="{% url 'Dindex' %}" class="active">HOME</a></li>
+                <div class="header-right">
+                    <li><a href="{% url 'DTypes' %}">TYPES OF DIABETES</a></li>
+                    <li><a href="{% url 'DPrevention' %}">PREVENTION</a></li>
+                    <li><a href="#">SYMPTOMS</a></li>
+                    <li><a href="#">TREATMENT</a></li>
+                    <li><a href="#">CAUSES</a></li>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <div class="text-center">
+        <img src="{% static 'Images/img10.jpg' %}">
+    </div>
+    <form method="post" action="predictDD">
+        <fieldset>
+            <legend>Healthy or Diabetic . .?</legend>
+
+            {% csrf_token %}
+
+            <br>
+            <label for="name">Name:-</label><input type="text" name="name" placeholder="Enter your Name"
+                required="required" /><br>
+            <label for="age">Age:-</label><input type="text" name="age" placeholder="Enter your age"
+                required="required" /><br>
+
+            <label class="pregencies" for="pregencies">Pregencies:-</label><input type="text" name="pregencies"
+                placeholder="Enter the number of pregencies" required="required" />
+            <br>
+
+            <label for="Glucose">Glucose:-</label><input type="text" name="Glucose" placeholder="Enter Glucose"
+                required="required" /><br>
+
+            <label for="BloodPressure">Blood Pressure:-</label><input type="text" name="BloodPressure"
+                placeholder="Enter Blood Pressure in mm Hg" required="required" />
+            <br>
+
+            <label for="SkinThickness">Skin Thickness:-</label><input type="text" name="SkinThickness"
+                placeholder="Enter Skin Thickness in mm" required="required" />
+            <br>
+
+            <label for="Insulin">Insulin:-</label><input type="text" name="Insulin" placeholder="Insulin"
+                required="required" /><br>
+
+
+
+            <label for="BMI">BMI:-</label><input type="text" name="BMI" placeholder="Enter BMI in kg/m"
+                required="required" /><br>
+
+
+            <label for="DiabetesPedigreeFunction">Diabetes pedigree function:-</label><input type="text"
+                name="DiabetesPedigreeFunction" placeholder="Enter Diabetes pedigree function"
+                required="required" /><br>
+
+
+            <div class="button_cont" align="center">
+                <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Diabetic
+                        disease</strong></button></a>
+            </div>
+        </fieldset>
+    </form>
+    {% if d1.name %}
+    <div class="col-xs-1 text-center">
+        <div id="ans" class="p-2">{{d1.name}} {{d1.msg}}</div>
+    </div>
+    {% endif %}
+    </div>
+
+</body>
+
+</html>

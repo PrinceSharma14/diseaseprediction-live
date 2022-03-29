@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types Of Heart Disease</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'CSS/Types.css' %}">
+</head>
+
+<body>
+
+    <div id="box-2">
+        <ul id='nav'>
+            <div class="header">
+                <li><a href="{% url 'Dindex' %}">HOME</a></li>
+                <div class="header-right">
+                    <li><a href="{% url 'DTypes' %}" class="active">TYPES OF DIABETES</a></li>
+                    <li><a href="{% url 'DPrevention' %}">PREVENTION</a></li>
+                    <li><a href="#">SYMPTOMS</a></li>
+                    <li><a href="#">TREATMENT</a></li>
+                    <li><a href="#">CAUSES</a></li>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <img src="{% static 'Images/img13.jpg' %}">
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <!-- Navbar content -->
+        <h1>Types Of Diabetes</h1>
+    </nav>
+    <p>
+        Diabetes mellitus, commonly known as diabetes, is a metabolic disease that causes high blood sugar. The hormone insulin moves sugar from the blood into your cells to be stored or used for energy. With diabetes, your body either does not make enough insulin or can not effectively use the insulin it does make.<br>
+
+Untreated high blood sugar from diabetes can damage your nerves, eyes, kidneys, and other organs.<br>
+There are a few different types of diabetes:
+    </p>
+    <h2 class="navbar navbar-dark  bg-danger">Type 1 diabetes</h2>
+    <p>
+        Type 1 diabetes is an autoimmune disease. The immune system attacks and destroys cells in the pancreas, where insulin is made. Its unclear what causes this attack. About 10 percent of people with diabetes have this type.
+    </p>
+    <h2 class="navbar navbar-dark bg-danger">Type 2 diabetes</h2>
+    <p>
+        Type 2 diabetes occurs when your body becomes resistant to insulin, and sugar builds up in your blood.
+    </p>
+    <h2 class="navbar navbar-dark bg-danger">Prediabetes</h2>
+    <p>
+        Prediabetes occurs when your blood sugar is higher than normal, but it’s not high enough for a diagnosis of type 2 diabetes.
+    </p>
+    <h2 class="navbar navbar-dark bg-danger">Gestational diabetes</h2>
+    <p>
+        Gestational diabetes is high blood sugar during pregnancy. Insulin-blocking hormones produced by the placenta cause this type of diabetes.
+    </p>
+</body>
+
+</html>
